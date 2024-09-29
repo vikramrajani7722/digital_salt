@@ -1,0 +1,7 @@
+<resources>
+    <string name="firebase_app_id">1:994043510277:android:25815bf3e8b16222df266c</string>
+    <string name="firebase_api_key">AIzaSyBMGvwrqxTkGo0RISPX6Hg-AIfDFw7S2MA</string>
+    <string name="firebase_storage_bucket">digitalsalt-3f356.appspot.com</string>
+    <string name="firebase_messaging_sender_id">994043510277</string>
+    <string name="firebase_project_id">digitalsalt-3f356</string>
+</resources>

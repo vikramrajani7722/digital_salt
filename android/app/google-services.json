@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "994043510277",
+    "project_id": "digitalsalt-3f356",
+    "storage_bucket": "digitalsalt-3f356.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:994043510277:android:25815bf3e8b16222df266c",
+        "android_client_info": {
+          "package_name": "com.digitalsalt.digital_salt"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMGvwrqxTkGo0RISPX6Hg-AIfDFw7S2MA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
