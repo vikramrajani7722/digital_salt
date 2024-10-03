@@ -36,7 +36,9 @@ class _BottomNavPageState extends State<BottomNavPage> {
         },
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Get.to(() => const SearchPage());
+        },
         backgroundColor: XColors.themeColor,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),
         child: const Icon(CupertinoIcons.search, color: Colors.white),

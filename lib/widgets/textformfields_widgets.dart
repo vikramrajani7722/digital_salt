@@ -41,46 +41,55 @@ class TextFormFieldsWidgets {
     ]);
   }
 
-  static Widget searchTextField({
-    required String hintText,
-    required TextEditingController controller,
-    required VoidCallback onTap,
-  }) {
-    return TextFormField(
-      textCapitalization: TextCapitalization.words,
-      controller: controller,
-      style: const TextStyle(
-        fontSize: 14,
-        fontFamily: XFonts.poppinsMedium,
-      ),
-      decoration: InputDecoration(
-        prefixIcon: IconButton(
-          onPressed: () {},
-          icon: Icon(
-            Icons.search,
-            color: Colors.grey.shade500,
-            size: 22,
-          ),
-        ),
-        suffixIcon: IconButton(
-          onPressed: onTap,
-          icon: Icon(
-            Icons.filter,
-            color: Colors.grey.shade500,
-            size: 22,
-          ),
-        ),
-        counterText: '',
-        focusedBorder: textFieldBorder(),
-        hintStyle: const TextStyle(
+  static Widget searchTextField(
+      {required String hintText,
+      required TextEditingController controller,
+      required VoidCallback onTap,
+      required bool isAbsorbing,
+      required bool showSuffixIcon,
+      required void Function(String)? onChanged}) {
+    return AbsorbPointer(
+      absorbing: isAbsorbing,
+      child: TextFormField(
+        textCapitalization: TextCapitalization.words,
+        controller: controller,
+        style: const TextStyle(
           fontSize: 14,
           fontFamily: XFonts.poppinsMedium,
         ),
-        hintText: hintText,
-        contentPadding: const EdgeInsets.all(16),
-        border: textFieldBorder(),
+        onChanged: onChanged,
+        decoration: InputDecoration(
+          prefixIcon: IconButton(
+            onPressed: () {},
+            icon: Icon(
+              Icons.search,
+              color: Colors.grey.shade500,
+              size: 22,
+            ),
+          ),
+          suffixIcon: Visibility(
+            visible: showSuffixIcon,
+            child: IconButton(
+              onPressed: onTap,
+              icon: Icon(
+                Icons.filter,
+                color: Colors.grey.shade500,
+                size: 22,
+              ),
+            ),
+          ),
+          counterText: '',
+          focusedBorder: textFieldBorder(),
+          hintStyle: const TextStyle(
+            fontSize: 14,
+            fontFamily: XFonts.poppinsMedium,
+          ),
+          hintText: hintText,
+          contentPadding: const EdgeInsets.all(16),
+          border: textFieldBorder(),
+        ),
+        keyboardType: TextInputType.text,
       ),
-      keyboardType: TextInputType.text,
     );
   }
 
